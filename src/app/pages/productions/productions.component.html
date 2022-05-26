@@ -1,0 +1,321 @@
+<div class="top-holder">
+    <div class="productions-shadow-title text-center">Productions</div>
+    <div class="top-main-header ps-2 ps-md-5 wow fade-in-top">Productions</div>
+</div>
+<div class="productions">
+    <div class="container-fluid">
+        <div class="row p-3 ps-md-5 pt-0 main-header-support-text  justify-content-center">
+            <div class="col-lg-6 wow fade-in-bottom text-center">
+                This space serves a dual purpose. First, to showcase some of my previous work in film, television, and
+                theatre. The
+                second is to invite you to join me in conversation with leading voices across the globe, tackling issues
+                on women in
+                leadership, Africa, the diaspora, and the interconnectedness of our world.
+            </div>
+
+            <ul class="nav nav-tabs justify-content-center pt-4" id="produuctions-tab" role="tablist">
+                <li class="nav-item no-border" role="presentation">
+                    <button class="nav-link active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                        type="button" role="tab" aria-controls="all" aria-selected="true" (click)="filterProd(null)"
+                        (click)="pageChanged(1)">All</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="television-tab" data-bs-toggle="tab" data-bs-target="#television"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false"
+                        (click)="filterProd('TV Series')" (click)="pageChanged(1)">Television</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="film-tab" data-bs-toggle="tab" data-bs-target="#film" type="button"
+                        role="tab" aria-controls="film" aria-selected="false" (click)="filterProd('Film')"
+                        (click)="pageChanged(1)">Film</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="theatre-tab" data-bs-toggle="tab" data-bs-target="#theatre"
+                        type="button" role="tab" aria-controls="theatre" aria-selected="false"
+                        (click)="filterProd('Theatre')" (click)="pageChanged(1)">Theatre</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="theatre-tab" data-bs-toggle="tab" data-bs-target="#podcast"
+                        type="button" role="tab" aria-controls="theatre" aria-selected="false"
+                        (click)="filterProd('Podcast')" (click)="pageChanged(1)">Podcast</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="tab-content" id="production-tab-content">
+
+        <div class="productions-print-left"></div>
+        <div class="productions-print-right"></div>
+
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 row">
+                        <!--
+                        <div class="col-lg-4 col-md-6 p-3 p-lg-5 wow scale-in-center"
+                            *ngFor="let prod of filteredProd  ; index as i" (click)="selectProd(i)"
+                            data-bs-toggle="modal" data-bs-target="#viewProduction">
+                            <div class="card" style="width: 100%;">
+                                <div class="card-img">
+                                    <img src="{{prod.image}}" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{prod.title}}</h5>
+                                    <p class="card-text">{{prod.type}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+
+                        <div class="col-lg-4 col-md-6 p-3"
+                            *ngFor="let prod of filteredProd  | paginate:{itemsPerPage: pageSize, currentPage: pageNumber}  ; index as i"
+                            (click)="selectProd(i)" data-bs-toggle="modal" data-bs-target="#viewProduction">
+                            <div class="custom-card" [ngStyle]="{'background-image':'url('+prod.image+')'}">
+                                <div class="custom-card-text-holder">
+                                    <div class="custom-card-text-inner">
+                                        <div class="main-holder  p-3">
+                                            <p>{{prod.title}}</p>
+                                            <p class="custom-card-type">-{{prod.type}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="television" role="tabpanel" aria-labelledby="television-tab">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 row">
+
+                        <!--
+                                                <div class="col-lg-4 col-md-6 p-3 p-lg-5 wow scale-in-center"
+                                                    *ngFor="let prod of filteredProd  ; index as i" (click)="selectProd(i)"
+                                                    data-bs-toggle="modal" data-bs-target="#viewProduction">
+                                                    <div class="card" style="width: 100%;">
+                                                        <div class="card-img">
+                                                            <img src="{{prod.image}}" class="card-img-top" alt="...">
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">{{prod.title}}</h5>
+                                                            <p class="card-text">{{prod.type}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                -->
+
+                        <div class="col-lg-4 col-md-6 p-3"
+                            *ngFor="let prod of filteredProd  | paginate:{itemsPerPage: pageSize, currentPage: pageNumber}  ; index as i"
+                            (click)="selectProd(i)" data-bs-toggle="modal" data-bs-target="#viewProduction">
+                            <div class="custom-card" [ngStyle]="{'background-image':'url('+prod.image+')'}">
+                                <div class="custom-card-text-holder">
+                                    <div class="custom-card-text-inner">
+                                        <div class="main-holder  p-3">
+                                            <p>{{prod.title}}</p>
+                                            <p class="custom-card-type">-{{prod.type}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="Film" role="tabpanel" aria-labelledby="film-tab">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 row">
+
+                        <!--
+                                                <div class="col-lg-4 col-md-6 p-3 p-lg-5 wow scale-in-center"
+                                                    *ngFor="let prod of filteredProd  ; index as i" (click)="selectProd(i)"
+                                                    data-bs-toggle="modal" data-bs-target="#viewProduction">
+                                                    <div class="card" style="width: 100%;">
+                                                        <div class="card-img">
+                                                            <img src="{{prod.image}}" class="card-img-top" alt="...">
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">{{prod.title}}</h5>
+                                                            <p class="card-text">{{prod.type}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                -->
+
+                        <div class="col-lg-4 col-md-6 p-3"
+                            *ngFor="let prod of filteredProd  | paginate:{itemsPerPage: pageSize, currentPage: pageNumber}  ; index as i"
+                            (click)="selectProd(i)" data-bs-toggle="modal" data-bs-target="#viewProduction">
+                            <div class="custom-card" [ngStyle]="{'background-image':'url('+prod.image+')'}">
+                                <div class="custom-card-text-holder">
+                                    <div class="custom-card-text-inner">
+                                        <div class="main-holder  p-3">
+                                            <p>{{prod.title}}</p>
+                                            <p class="custom-card-type">-{{prod.type}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="theatre" role="tabpanel" aria-labelledby="theatre-tab">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 row">
+
+                        <!--
+                                                <div class="col-lg-4 col-md-6 p-3 p-lg-5 wow scale-in-center"
+                                                    *ngFor="let prod of filteredProd  ; index as i" (click)="selectProd(i)"
+                                                    data-bs-toggle="modal" data-bs-target="#viewProduction">
+                                                    <div class="card" style="width: 100%;">
+                                                        <div class="card-img">
+                                                            <img src="{{prod.image}}" class="card-img-top" alt="...">
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">{{prod.title}}</h5>
+                                                            <p class="card-text">{{prod.type}}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                -->
+
+                        <div class="col-lg-4 col-md-6 p-3"
+                            *ngFor="let prod of filteredProd  | paginate:{itemsPerPage: pageSize, currentPage: pageNumber}  ; index as i"
+                            (click)="selectProd(i)" data-bs-toggle="modal" data-bs-target="#viewProduction">
+                            <div class="custom-card" [ngStyle]="{'background-image':'url('+prod.image+')'}">
+                                <div class="custom-card-text-holder">
+                                    <div class="custom-card-text-inner">
+                                        <div class="main-holder  p-3">
+                                            <p>{{prod.title}}</p>
+                                            <p class="custom-card-type">-{{prod.type}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="podcast" role="tabpanel" aria-labelledby="podcast-tab">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 row justify-content-center">
+                        <div class="text-center no-content">
+                            Sorry! No content to display at the moment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <pagination-controls class="text-center paginationHolder" maxSize="6" (pageChange)="pageChanged($event)"
+            directionLinks="true" autoHide="true" responsive="true" previousLabel="Previous" nextLabel="Next"
+            screenReaderPaginationLabel="Pagination" screenReaderPageLabel="page"
+            screenReaderCurrentLabel="You're on page">
+        </pagination-controls>
+    </div>
+</div>
+
+<app-footer></app-footer>
+
+<!--VIEW PRODUCTION MODAL-->
+<div class="modal fade" id="viewProduction" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row p-1 p-md-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sx-12 col-lg-6 justify-content-center">
+                            <img src="{{viewProd.image}}" alt="" class="production-view-image">
+
+                            <div class="production-details">
+                                <h2 class="production-view-title pb-3">Production Details</h2>
+                                <div class="production-details-inner p-2">
+                                    <p>Production Type: {{viewProd.type}} </p>
+                                    <p>Character Played: {{viewProd.characterName}} </p>
+                                </div>
+
+                                <ul class="timeline ps-0 ps-md-2 ps-lg-5" *ngIf="viewProd.timeLine">
+                                    <li class="timeline-item" *ngFor="let timeLine of viewProd.timeLine">
+                                        <div class="timeline-info">
+                                            <span>{{timeLine.season}}</span>
+                                            <div class="timeline-marker"></div>
+                                            <div class="timeline-content">
+                                                <table class="table table-borderless">
+                                                    <tbody class="p-1">
+                                                        <tr>
+                                                            <td>channel</td>
+                                                            <td>: {{timeLine.channel}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>premiere</td>
+                                                            <td>: {{timeLine.premiere}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>finale</td>
+                                                            <td>: {{timeLine.finale}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Air Time</td>
+                                                            <td>: {{timeLine.txTime}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="col-sx-12 col-lg-6">
+                            <h2 class="production-view-title">{{viewProd.title}}</h2>
+                            <div class="col-12 p-2 p-ld-3">
+                                <p class="darkBlueText" *ngFor="let text of viewProd.text">
+                                    {{text}}
+                                </p>
+
+                                <ng-container *ngIf="viewProd.link">
+
+                                    <youtube-player videoId="{{cleanUrl(viewProd.link)}}" class="video-player">
+                                    </youtube-player>
+                                </ng-container>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn modal-btn" (click)="viewPrev()">Previous</button>
+                <button type="button" class="btn modal-btn" data-bs-dismiss="modal">Home</button>
+                <button type="button" class="btn modal-btn" (click)="viewNext()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>

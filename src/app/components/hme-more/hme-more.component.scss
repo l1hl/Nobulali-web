@@ -1,0 +1,116 @@
+@import "../../../assets/css/variables.scss";
+
+.hme-more{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-header-white{
+    color: #37526F;
+    font-size: 7em;
+    span{
+        font-family: 'Wanted Signature';
+        font-size: 1.2em;
+    }
+}
+
+.main-header{
+    padding-top: 10%;
+    color: $newTextBlue;
+}
+
+.more-card{
+    border-radius: 0;
+    a{
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+.card-body,.more-card{
+    background-color: $newTextBlue!important;
+    text-decoration: none;
+    .card-title{
+        color: $newMustard;
+        font-family: 'Museo Sans 700';
+        font-size: 2em;
+    }
+    .card-text>a{
+        color: #96C4EA;
+        font-size: 1.2em;
+        font-family: 'Museo Sans 100';
+    }
+}
+
+.custom-card{
+    position: relative;
+    width: 100%;
+    height: 325px;
+    //border: solid 1px red;
+   // background-image: url('../../../assets/images/default.png');
+    background-position: center center;
+    background-size: cover;
+
+    box-shadow: 13px 13px 7px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 13px 13px 7px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 13px 13px 7px 0px rgba(0,0,0,0.15);
+}
+
+.custom-card-text-holder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(35,49,73,1)  10%, rgba(35,49,73,.5) 30%, transparent 50%);
+
+    transition: background-color 1.5s ease;
+
+    .custom-card-text-inner{
+        transition: color .6s ease;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 25%;
+        //color: #fff;
+        color: $newMustard;
+
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin: 0 0 1.5em 0;
+        text-transform: uppercase;
+        text-align: center;
+
+        .custom-card-type{
+            text-align: end;
+        }
+
+        .main-holder{
+            bottom: -40px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+
+        }
+    }
+}
+
+/*
+.custom-card-text-holder:hover{
+    background: linear-gradient(to top, rgba(35,49,73,.0)  0%, rgba(35,49,73,.0) 100%);
+
+    .custom-card-text-inner{
+        color: transparent;
+    }
+}
+
+*/
+.custom-card-title{
+    font-size: large;
+}
+
+
+@import "../../../assets/css/responsive.scss";

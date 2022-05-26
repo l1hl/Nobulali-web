@@ -1,0 +1,40 @@
+<nav
+    class="navbar fixed-top navbar-expand-lg navbar-blue {{navClear ? 'navbar-clear' : ''}} {{navWhite ? 'navbar-white' : ''}}">
+    <div class="container">
+        <a class="navbar-brand" href="/"><img src="../../../assets/images/text_logo_2.png" alt="text-logo"
+                class="text-logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"
+            (click)="toggleNavList()">
+            <i class="fas fa-align-right"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="toggleNav()" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{navWhite ? 'active' :''}}" (click)="toggleNav()" (click)="toAbout()">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="toggleNav()" routerLink="/productions"
+                        routerLinkActive="active">PRODUCTIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="toggleNav()" routerLink="/strartegy" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">STRARTEGY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="toggleNav()" routerLink="/shakeXperience" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">SHAKEXPERIENCE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="toggleNav()" routerLink="/contact" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact:true}">CONTACT US</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

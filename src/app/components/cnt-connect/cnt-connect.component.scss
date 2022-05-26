@@ -1,0 +1,44 @@
+@import '../../../assets/css/variables.scss';
+
+.contact-landing{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(59,72,103,1) 0%, rgba(35,49,73,1) 65%);
+    position: relative;
+}
+
+.contact-landing-holder{
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url('../../../assets/images/Untitled-7.png');
+        background-position: center left;
+        background-repeat: no-repeat;
+        background-size: contain;
+}
+
+.main-landing-content-holder{
+        padding-top: 10%;
+}
+
+.contact-landing-text-holder{
+        background-color: #223a5d7e;
+        .inner{
+                position: relative;
+                width: 100%;
+                min-height: 20vh;
+                border: 1px solid $newMustard;
+        }
+}
+
+.main-header-white{
+        color: white;
+        font-family: 'Baskerville Old Face';
+        font-size: 6em;
+        line-height: 1.1;
+}
+
+.text{
+        color: white;
+}
+@import "../../../assets/css/responsive.scss";

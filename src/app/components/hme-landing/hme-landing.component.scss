@@ -1,0 +1,25 @@
+@import '../../../assets/css/variables.scss';
+
+.hme-landing{
+    width: 100%;
+    min-height: 100vh;
+
+    background-image: url('../../../assets/images/home/landing.png');
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 15%;
+}
+
+.main-header-white{
+    font-size: 9em;
+}
+
+.booking-secondary-text{
+     font-family: 'Museo Sans 300';
+     font-size: 2em;
+     line-height: 1.1;
+     color: $newMustard;
+}
+
+@import "../../../assets/css/responsive.scss";

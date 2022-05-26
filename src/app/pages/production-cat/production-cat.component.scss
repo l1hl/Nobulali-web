@@ -1,0 +1,344 @@
+@import "../../../assets/css/variables.scss";
+
+.productions{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #F2F7F9;
+}
+
+.nav-tabs{
+    border: none;
+    .nav-item{
+        //border-left: 1px solid white;
+        .nav-link{
+            border: none;
+            color: white;
+            font-family: 'Baskerville Old Face';
+            font-size: larger;
+        }
+
+        .active{
+            border-bottom: 2px solid $newMustard;
+            background-color: transparent;
+        }
+    }
+}
+
+.no-border{
+    border: none !important;
+}
+
+
+
+.card{
+   box-shadow: 13px 13px 7px 0px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 13px 13px 7px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 13px 13px 7px 0px rgba(0,0,0,0.15);
+}
+
+.card-body{
+    background-color: white;
+    .card-title{
+        color: $textDarkBlue;
+        text-align: center;
+    }
+    .card-text{
+        font-family: 'Museo Sans 500';
+        color: $textDarkBlue;
+        text-align: end;
+    }
+}
+
+.production-view-title{
+    font-family: 'Museo Sans 300';
+    color: $darkBlueText;
+}
+
+.production-view-image{
+    width: 100%;
+}
+
+.modal-btn{
+    color: $darkBlueText;
+}
+
+.modal-footer, .modal-header,.darkBlueText{
+    border: none;
+    color: $darkBlueText;
+}
+
+
+.top-holder{
+    width: 100%;
+    min-height: 50vh;
+    background: linear-gradient(90deg, rgba(59,72,103,1) 0%, rgba(35,49,73,1) 65%);
+    position: relative;
+    z-index: -1;
+}
+
+
+.productions-shadow-title{
+    position: absolute;
+    z-index: 1;
+
+    text-transform: uppercase;
+    font-family: 'Baskerville Old Face';
+    font-size: 11em;
+    color: $shadowTitle;
+    opacity: .15;
+
+    width: 100%;
+    bottom: 5%;
+}
+
+.top-main-header{
+    color: $textCream;
+    font-family: 'Baskerville Old Face';
+    font-size: 8rem;
+    position: absolute;
+    bottom: -5%;
+    text-shadow: 2px 2px 2px rgba(88,114,139,0.6);
+    z-index: 4;
+    text-align: center;
+    width: 100%;
+}
+
+.main-header-support-text{
+    background: linear-gradient(90deg, rgba(59,72,103,1) 0%, rgba(35,49,73,1) 65%);
+    color: $textCream;
+}
+
+#production-tab-content{
+    z-index: 3;
+    position: relative;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+
+.productions-print-left{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-image: url("../../../assets/images/productions-print-left.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    opacity: .3;
+}
+
+.productions-print-right{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    background-image: url("../../../assets/images/productions-print-right.png");
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center right;
+    opacity: .3;
+}
+
+.video-player>iframe{
+    aspect-ratio: 16 / 9;
+    width: 100% !important;
+    height: 56.25% !important;
+}
+
+//SHAKEXPERIENCE
+#shakexperience{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(59,72,103,1) 0%, rgba(35,49,73,1) 65%);
+    color: $textCream;
+}
+
+.shakexperience-image{
+    width: 100%;
+    height: 70vh;
+    background-image: url('../../../assets/images/Untitled-7.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.shakexperience-text{
+    color: $textCream;
+}
+
+.nav-tabs{
+    border: none;
+    .nav-item{
+        //border-left: 1px solid white;
+        .nav-link{
+            border: none;
+            color: $newMustard;
+            //font-family: 'Baskerville Old Face';
+            //font-size: small;
+        }
+
+        .active{
+            border-radius: 0%;
+            border: solid $newMustard 1px;
+            background-color: transparent;
+        }
+    }
+}
+
+.timeline {
+        line-height: 1.4em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        //width: 100%;
+        h1, h2, h3, h4, h5, h6 {
+            line-height: inherit;
+        }
+    }
+
+    /*----- TIMELINE ITEM -----*/
+
+    .timeline-item {
+        padding-left: 40px;
+        position: relative;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    /*----- TIMELINE INFO -----*/
+
+    .timeline-info {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin: 0 0 .5em 0;
+        text-transform: uppercase;
+        //white-space: nowrap;
+    }
+    /*----- TIMELINE MARKER -----*/
+
+    .timeline-marker {
+        position: absolute;
+        top: 0; bottom: 0; left: 0;
+        width: 15px;
+        &:before {
+            background: $primary-color;
+            border: 3px solid transparent;
+            border-radius: 100%;
+            content: "";
+            display: block;
+            height: 15px;
+            position: absolute;
+            top: 4px; left: 0;
+            width: 15px;
+            transition: background 0.3s ease-in-out,
+                    border 0.3s ease-in-out;
+        }
+        &:after {
+            content: "";
+            width: 3px;
+            background: $newMustard;
+            display: block;
+            position: absolute;
+            top: 24px; bottom: 0; left: 6px;
+        }
+        .timeline-item:last-child &:after {
+            content: none;
+        }
+    }
+    .timeline-item:not(.period):hover .timeline-marker:before {
+        background: transparent;
+        border: 3px solid $primary-color;
+    }
+
+    /*----- TIMELINE CONTENT -----*/
+
+    .timeline-content {
+        padding-bottom: 40px;
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    /*----- TIMELINE PERIOD -----*/
+    
+    .period {
+        padding: 0;
+        .timeline-info {
+            display: none;
+        }
+        .timeline-marker {
+            &:before {
+                background: transparent;
+                content: "";
+                width: 15px;
+                height: auto;
+                border: none;
+                border-radius: 0;
+                top: 0;
+                bottom: 30px;
+                position: absolute;
+                border-top: 3px solid $newMustard;
+                border-bottom: 3px solid $newMustard;
+            }
+            &:after {
+                content: "";
+                height: 32px;
+                top: auto;
+            }
+        }
+        .timeline-content {
+            padding: 40px 0 70px;
+        }
+        .timeline-title {
+            margin: 0;
+        }
+    }
+
+
+    .gold-sub-heading{
+        color: $newMustard;
+        text-align: center;
+        font-family: 'Baskerville Old Face';
+        font-size: 2em;
+        width: 100%;
+        span{
+            font-family: 'Wanted Signature';
+            font-size: 2em;
+        }
+    }
+
+    .countries{
+        text-align: center;
+        li{
+            display: inline-table;
+            padding-right: 10px;
+             padding-left: 10px;
+            text-align: center;
+            border-left: $newMustard solid 2px;
+
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin: 0 0 .5em 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .gold-underline::after{
+        content: "";
+        display: block;
+        width: 80%;
+        //max-width: 30%;
+        height: 1pt;
+        background-color: $newMustard;
+        position: relative;
+        left: 10%;
+        top: .5em;
+        text-align: center;
+    }
+
+
+
+@import "../../../assets/css/responsive.scss";

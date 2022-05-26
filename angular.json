@@ -7,7 +7,8 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
         }
       },
       "root": "",
@@ -28,9 +29,18 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+              "./node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/wowjs/dist/wow.min.js",
+              "./src/assets/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -66,7 +76,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "nobulali:build"
+            "browserTarget": "nobulali:build",
+            "host": "192.168.0.101"
           },
           "configurations": {
             "production": {
@@ -92,9 +103,16 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
+              "./node_modules/swiper/swiper-bundle.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/wowjs/dist/wow.min.js",
+              "./node_modules/@fortawesome/fontawesome-free/js/all.js",
+              "./src/assets/js/script.js"
+            ]
           }
         },
         "lint": {
@@ -123,6 +141,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "nobulali"
 }

@@ -1,0 +1,68 @@
+@import '../../../assets/css/variables.scss';
+
+.navbar-clear{
+    background-color: transparent;
+}
+
+.nav-item{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-link{
+    color: $textMustard;
+    font-family: 'Muli Regular';
+    font-weight: bolder;
+    //font-size: small;
+}
+
+.navbar{
+    z-index: 101;
+}
+
+.navbar-white{
+    background-color: rgba(35,49,73,1);
+   .container{
+       .navbar-toggler{
+           color: $white;
+       }
+       .collapse{
+           .navbar-nav{
+               .nav-item{
+                   .active{
+                       border-bottom: .1rem solid $white;
+                   }
+                   .nav-link{
+                       color: white;
+                   }
+               }
+           }
+       }
+   }
+}
+
+.navbar-blue{
+    background-color: rgba(35,49,73,1);
+}
+
+.navbar-clear{
+    background-color: transparent;
+}
+
+.text-logo{
+    width: 205px;
+    height: auto;
+}
+
+.navbar-toggler{
+    border: none;
+    color: $newMustard;
+}
+
+.nav-link:hover,
+.active {
+  border-bottom: .1rem solid $newMustard;
+}
+
+
+@import "../../../assets/css/responsive.scss";

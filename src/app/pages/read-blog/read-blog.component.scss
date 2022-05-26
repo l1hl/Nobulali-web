@@ -1,0 +1,25 @@
+@import '../../../assets/css/variables.scss';
+
+.read-blog{
+    background-color: $blueBlock;
+    height: 30vh;
+}
+
+.blog-details, .text{
+    color: black;
+    font-family: 'Museo Sans 100';
+}
+
+.blog-content{
+    min-height: 90vh;
+}
+
+.blog-btn{
+    min-height: 30vh;
+}
+
+.btn-dark-blue{
+    color: $white;
+}
+
+@import "../../../assets/css/responsive.scss";

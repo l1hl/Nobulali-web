@@ -1,0 +1,159 @@
+@import "../../../assets/css/variables.scss";
+
+.abt-slide{
+    width: 100%;
+    height: 100vh !important;
+    position: relative;
+    
+    background: linear-gradient(90deg, rgba(59,72,103,1) 0%, rgba(35,49,73,1) 65%);
+    overflow-y: hidden;
+}
+
+.abt-slide-content{
+   position: relative;
+   min-height: 100vh;
+}
+
+.slide-img-holder{
+    position: relative;
+    //border: red solid 1px;
+    height: 100vh;
+    z-index: 3;
+}
+
+.slide-img-main-holder{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.abt-welcome-img{
+    background-image: url('../../../assets/images/about/abt-welcome.png');
+}
+
+.abt-educator-img{
+    background-image: url('../../../assets/images/about/abt-educator.png');
+}
+
+.abt-entrepreneur-img{
+    background-image: url('../../../assets/images/about/abt-entrepreneur.png');
+}
+
+.abt-artist-img{
+    background-image: url('../../../assets/images/about/abt-artist.png');
+}
+
+
+
+.slide-text-holder{
+    //border: green solid 1px;
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+    right: 0;
+}
+
+.slide-main-text-holder{
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    background-color: rgba(35,49,73,.2);
+     background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(35,49,73,1) 100%);
+    //border: lime solid 1px;
+
+}
+
+.slide-nav{
+    width: 80%;
+    //border: lime solid 1px;
+    height: 10vh;
+    z-index: 30;
+    position: relative;
+}
+
+.abt-btn{
+    color: white;
+    img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+.btn-grey{
+    background-color: $shadowTitle;
+}
+
+.gold-sub-heading{
+    color: $newMustard;
+    text-align: center;
+    font-family: 'Baskerville Old Face';
+    font-size: 3em;
+    width: 100%;
+    span{
+        font-family: 'Wanted Signature';
+        font-size: 2em;
+    }
+}
+
+.gold-underline::after{
+    content: "";
+    display: block;
+    width: 80%;
+    //max-width: 30%;
+    height: 1pt;
+    background-color: $newMustard;
+    position: relative;
+    left: 10%;
+    top: .5em;
+    text-align: center;
+}
+
+.abt-text{
+    color: $textCream;
+    text-align: justify;
+}
+
+.abt-write-up-holder{
+    //border: red solid 1px;
+    height: 45vh;
+    overflow-y:scroll;
+}
+
+.abt-write-up-holder::-webkit-scrollbar{
+    //overflow-y: hidden;
+    width: 3px;
+}
+
+.abt-write-up-holder::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.abt-write-up-holder::-webkit-scrollbar-thumb {
+  background-color: $newMustard;
+  //outline: 1px solid slategrey;
+}
+
+.abt-write-up{
+    height: 100%;
+}
+
+.shadow-title{
+    position: absolute;
+    z-index: 2;
+
+    font-family: 'Baskerville Old Face';
+    font-size: 32em;
+    color: $shadowTitle;
+    opacity: .15;
+
+    right: 1.5%;
+    bottom: -35%;
+}
+
+
+
+@import "../../../assets/css/responsive.scss";

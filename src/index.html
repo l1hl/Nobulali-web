@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Nobulali</title>
@@ -7,7 +8,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
+<!--LADER  STYLE-->
+<style>
+  .se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(245, 245, 245, 0.589);
+  }
+
+  .cover-screen {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .cover-screen-img {
+    position: relative;
+    top: 45%;
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+</style>
+
 <body>
   <app-root></app-root>
 </body>
+
+<!--LOADING SCREEN-->
+<div class="se-pre-con">
+  <div class="cover-screen">
+    <img src="./assets/images/loader_3.gif" alt="Nobulali Logo" class="cover-screen-img">
+  </div>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./assets/js/cycle2.min.js"></script>
+  <script src="./assets/js/cycle2.scrollVert.js"></script>
+  <script src="./assets/js/cycle2.flip.js"></script>
+
+  <script>
+    window.onload = function () {
+      $('.se-pre-con').fadeOut(300, function () {
+        $('.se-pre-con').addClass('invisible')
+      })
+    }
+  </script>
+
 </html>

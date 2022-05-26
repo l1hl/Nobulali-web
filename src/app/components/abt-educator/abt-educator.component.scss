@@ -1,0 +1,148 @@
+@import "../../../assets/css/variables.scss";
+
+.abt-slide-mobile{
+    width: 100%;
+   // min-height: 100vh;
+    position: relative;
+    
+    background: rgba(35,49,73,1);
+    //overflow-y: hidden;
+    //border: red solid 1px;
+}
+
+.abt-slide-content{
+   position: relative;
+   height: max-content;
+}
+
+.slide-img-holder{
+    position: relative;
+    //border: red solid 1px;
+    height: 50vh;
+    z-index: 3;
+}
+
+.slide-img-main-holder{
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img-fade{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    right: 0;
+    //border: red solid 1px;
+    background: linear-gradient(to top, rgba(35,49,73,1)  0%, rgba(35,49,73,0) 100%);
+}
+
+.abt-welcome-img{
+    background-image: url('../../../assets/images/about/abt-welcome-mobile.png');
+}
+
+.abt-educator-img{
+    background-image: url('../../../assets/images/about/abt-educator-mobile.png');
+}
+
+.abt-entrepreneur-img{
+    background-image: url('../../../assets/images/about/abt-entrepreneur-mobile.png');
+}
+
+.abt-artist-img{
+    background-image: url('../../../assets/images/about/abt-artist-mobile.png');
+}
+
+
+
+.slide-text-holder{
+    //border: green solid 1px;
+    position: relative;
+    //height: 100vh;
+    z-index: 1;
+    right: 0;
+}
+
+.slide-main-text-holder{
+    position: relative;
+    width: 100%;
+    ///min-height: 70vh;
+    //border: lime solid 1px;
+
+}
+
+.slide-nav{
+    width: 80%;
+    //border: lime solid 1px;
+    height: 10vh;
+    z-index: 30;
+    position: relative;
+}
+
+.abt-btn{
+    color: white;
+    img{
+        width: 30px;
+        height: auto;
+    }
+}
+
+.btn-grey{
+    background-color: $shadowTitle;
+}
+
+.gold-sub-heading{
+    color: $newMustard;
+    text-align: center;
+    font-family: 'Baskerville Old Face';
+    font-size: 3em;
+    width: 100%;
+    span{
+        font-family: 'Wanted Signature';
+        font-size: 2em;
+    }
+}
+
+.gold-underline::after{
+    content: "";
+    display: block;
+    width: 80%;
+    //max-width: 30%;
+    height: 1pt;
+    background-color: $newMustard;
+    position: relative;
+    left: 10%;
+    top: .5em;
+    text-align: center;
+}
+
+.abt-text{
+    color: $textCream;
+    text-align: justify;
+}
+
+.shadow-title{
+    position: absolute;
+    z-index: 3;
+
+    font-family: 'Baskerville Old Face';
+    font-size: 32em;
+    color: $shadowTitle;
+    opacity: .15;
+
+    right: 1.5%;
+   // bottom: -35%;
+}
+
+.btn-gold-ring{
+    color: $newMustard;
+    border: solid $newMustard 1px;
+}
+
+@import "../../../assets/css/responsive.scss";

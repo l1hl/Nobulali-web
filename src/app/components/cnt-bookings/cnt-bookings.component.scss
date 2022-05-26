@@ -1,0 +1,70 @@
+@import '../../../assets/css/variables.scss';
+
+.cnt-bookings{
+    min-height: 100vh;
+    background-color: $newMustard;
+}
+
+.main-header-white{
+        color: white;
+        font-family: 'Baskerville Old Face';
+        font-size: 6em;
+        line-height: 1.1;
+}
+
+.content-holder{
+    width: 100%;
+    z-index: 20!important;
+}
+
+.booking-text-holder{
+    color: #37526F;
+    font-family: 'Museo Sans 300';
+}
+
+.booking-secondary-text{
+     font-family: 'Museo Sans 700';
+     font-size: 3em;
+     line-height: 1.1;
+}
+
+.booking-text::after{
+    content: "";
+    display: block;
+    min-width: 20%;
+    max-width: 50%;
+    height: 1px;
+    background-color: $newTextBlue;
+    position: relative;
+    right: 0;
+    //top: 100%;
+    margin-top: 5%;
+}
+
+
+mat-form-field{
+    width: 100%;
+}
+
+.form-btn-holder{
+    text-align: end;
+}
+
+form{
+    z-index: 20!important;
+}
+
+.mat-form-field-flex{
+    background-color: $lightGrey !important;
+}
+
+.close-btn{
+    color: $newMustard;
+    background-color: #37526F;
+}
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+@import "../../../assets/css/responsive.scss";

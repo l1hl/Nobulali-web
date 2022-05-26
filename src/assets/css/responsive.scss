@@ -1,0 +1,320 @@
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@import "./variables.scss";
+
+@media (max-width: 575.98px) { 
+    body{
+        overflow-x: hidden!important;
+    }
+
+    .hme-landing{
+        width: 100%;
+        padding-top: 80% !important;
+        background-position: 90% bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        .content-holder-home-landing {
+            padding-top: 45%;
+            text-align: center!important;
+            background-color: #223a5d7e;
+            .inner{
+                    position: relative;
+                    width: 100%;
+                    min-height: 20vh;
+                    border: 1px solid $newMustard;
+            }
+        }
+        
+    }
+
+    .hme-quote{
+        padding-top: 10%;
+        min-height: 50vh;
+        .content-holder::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            margin-top: -5%;
+            left: -12%;
+            z-index: -1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                opacity: .4;
+            //transform: rotate(25deg);
+        }
+
+        .quote-mark{  
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .quote-mark-right{
+            margin-left: 80%;
+        }
+
+        .quote-text{
+            text-align: center;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        }
+    }
+
+    .nav-link{
+        text-align: center;
+        width: 100%;
+        padding-left: 0px!important;
+       
+    }
+
+    .scroll{
+        top: 80vh;
+        width: 110px;
+        height: auto;
+
+    }
+
+    //ABOUT PAGE
+    .gold-sub-heading{
+        font-size: 2em;
+        width: 100%;
+        span{
+            font-size: 2em;
+        }
+    }
+
+    .shadow-title{
+        position: absolute;
+        z-index: 3;
+
+        font-family: 'Baskerville Old Face';
+        font-size: 12em;
+        color: $shadowTitle;
+        opacity: .15;
+
+        right: 1.5%;
+        top: -10%;
+    }
+
+    //PRODUCTIONS PAGE
+    #shakexperience{
+         background: rgba(35,49,73,1);
+    }
+
+    .top-holder{
+        min-height: 30vh;
+        background: rgba(35,49,73,1);
+    }
+
+    .productions-shadow-title{
+        font-size: 12em;
+        right: 0%;
+        bottom: 5%;
+        overflow-x: hidden;
+    }
+
+    .top-main-header{
+        font-size: 2em;
+        position: absolute;
+        bottom: 20%;
+    }
+
+    .main-header-support-text{
+        background: rgba(35,49,73,1);
+    }
+
+    //SHAKE
+    .shakexperience-image{
+        height: 50vh;
+    }
+
+    //CONTACT LANDING
+    .main-landing-content-holder{
+        padding-top: 80%;
+    }
+
+    .main-header-white{
+        position: relative;
+        font-size: 4em;
+        span{
+            position: absolute;
+            top: 35px !important;
+            line-height: -20px;
+            right: 40px;
+        }
+    }
+
+     //CONTACT BOOKING
+    .booking-secondary-text{
+        font-size: 1.8em;
+    }
+ }
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+
+    .hme-landing{
+        padding-top: 20%;
+
+        .content-holder-home-landing {
+           // padding-top: 45%;
+            text-align: center!important;
+            background-color: #223a5d7e;
+            .inner{
+                position: relative;
+                width: 100%;
+                min-height: 20vh;
+                border: 1px solid $newMustard;
+            }
+        }
+    }
+
+
+    //ABOUT PAGE
+    .gold-sub-heading{
+        font-size: 2em;
+        width: 100%;
+        span{
+            font-size: 2em;
+        }
+    }
+
+    .shadow-title{
+        position: absolute;
+        z-index: 3;
+
+        font-family: 'Baskerville Old Face';
+        font-size: 12em;
+        color: $shadowTitle;
+        opacity: .15;
+
+        right: 1.5%;
+        top: -10%;
+    }
+
+    //PRODUCTIONS PAGE
+    #shakexperience{
+         background: rgba(35,49,73,1);
+    }
+
+    .top-holder{
+        min-height: 30vh;
+        background: rgba(35,49,73,1);
+    }
+
+    .productions-shadow-title{
+        font-size: 6em;
+        right: 0%;
+        bottom: 5%;
+    }
+
+    .top-main-header{
+        font-size: 2.5em;
+        position: absolute;
+        bottom: 20%;
+        
+    }
+
+    .main-header-support-text{
+        background: rgba(35,49,73,1);
+    }
+
+     //CONTACT LANDING
+   
+
+    .main-header-white{
+        font-size: 4em;
+    }
+
+     //CONTACT BOOKING
+    .booking-secondary-text{
+        font-size: 2em;
+    }
+ }
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+
+    .hme-landing{
+        padding-top: 20%;
+
+        .content-holder-home-landing {
+           //padding-top: 45%;
+            text-align: center!important;
+            background-color: #223a5d7e;
+            .inner{
+                position: relative;
+                width: 100%;
+                min-height: 20vh;
+                border: 1px solid $newMustard;
+            }
+        }
+    }
+
+    //ABOUT PAGE
+    .gold-sub-heading{
+        font-size: 2em;
+        width: 100%;
+        span{
+            font-size: 2em;
+        }
+    }
+
+    .shadow-title{
+        position: absolute;
+        z-index: 3;
+
+        font-family: 'Baskerville Old Face';
+        font-size: 12em;
+        color: $shadowTitle;
+        opacity: .15;
+
+        right: 1.5%;
+        top: -10%;
+    }
+
+    //PRODUCTIONS PAGE
+    #shakexperience{
+         background: rgba(35,49,73,1);
+    }
+
+    .top-holder{
+        min-height: 30vh;
+        background: rgba(35,49,73,1);
+    }
+
+    .productions-shadow-title{
+        font-size: 6em;
+        right: 0%;
+        bottom: 5%;
+    }
+
+    .top-main-header{
+        font-size: 2em;
+        position: absolute;
+        bottom: 20%;
+    }
+
+    .main-header-support-text{
+        background: rgba(35,49,73,1);
+    }
+
+     //CONTACT LANDING
+    .main-header-white{
+        font-size: 4em;
+    }
+
+    //CONTACT BOOKING
+    .booking-secondary-text{
+        font-size: 2em;
+    }
+ }
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {  }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {  }

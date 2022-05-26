@@ -1,0 +1,69 @@
+@import '../../../assets/css/variables.scss';
+
+
+.footer{
+    position: relative;
+    width: 100%;
+    background-color: rgba(35,49,73,1);
+    font-family: 'Museo Sans 100';
+}
+
+.footer-inner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    background-image: url('../../../assets/images/print-footer-mobile.png');
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    
+    opacity: .1;
+    z-index: 1;
+}
+
+.content-holder, form{
+    z-index: 55;
+    position: relative;
+}
+
+.footer-text,.footer-links > a{
+    color: $superLightGrey;
+    line-height: 1rem;
+    text-decoration: none;
+   
+}
+
+.text-end >a{
+    color: $superLightGrey;
+    text-decoration: none;
+}
+
+.footer-header{
+    font-family: 'Museo Sans 500';
+    color: white;
+}
+
+.footer-copyright{
+    position: relative;
+    z-index: 2;
+    color: $lightGrey;
+    line-height: 1rem;
+    background-color: #0A1E2D;
+    font-family: 'Museo Sans 500';
+}
+
+.mat-form-field-flex{
+    background-color: red !important;
+}
+
+.btn-mustard{
+    padding: 11px;
+    margin-left: -20px;
+    font-family: 'Museo Sans 100';
+    background-color: $textMustard;
+}
+
+@import "../../../assets/css/responsive.scss";

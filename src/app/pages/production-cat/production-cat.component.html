@@ -1,0 +1,200 @@
+<div class="top-holder">
+    <div class="productions-shadow-title text-center">{{prodName}}</div>
+    <div class="top-main-header ps-2 ps-md-5 wow fade-in-top">{{prodName}}</div>
+</div>
+
+<!--BLOG-->
+<div class="productions" *ngIf="prodName=='StrARTegy'">
+    <div class="container-fluid">
+        <div class="row p-3 ps-md-5 pt-0 main-header-support-text  justify-content-center">
+            <div class="col-lg-6 wow fade-in-bottom text-center">
+                Welcome to StrARTegy! You will find thought leader videos by Lali on various topics
+            </div>
+
+            <ul class="nav nav-tabs justify-content-center pt-4" id="produuctions-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="theatre-tab" data-bs-toggle="tab" data-bs-target="#theatre"
+                        type="button" role="tab" aria-controls="theatre" aria-selected="false"
+                        (click)="filterProd('Theatre')" (click)="pageChanged(1)">ALL</button>
+                </li>
+                <li class="nav-item no-border" role="presentation">
+                    <button class="nav-link" id="all-tab" data-bs-toggle="tab" data-bs-target="#all" type="button"
+                        role="tab" aria-controls="all" aria-selected="true" (click)="filterProd(null)"
+                        (click)="pageChanged(1)">JUST LALI</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="television-tab" data-bs-toggle="tab" data-bs-target="#television"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false"
+                        (click)="filterProd('TV Series')" (click)="pageChanged(1)">ON EDUCATION AND MY WORK AT
+                        GIBS</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="film-tab" data-bs-toggle="tab" data-bs-target="#film" type="button"
+                        role="tab" aria-controls="film" aria-selected="false" (click)="filterProd('Film')"
+                        (click)="pageChanged(1)">ENTREPRENEURSHIP AND RUNNING A BUSINESS</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="theatre-tab" data-bs-toggle="tab" data-bs-target="#podcast"
+                        type="button" role="tab" aria-controls="theatre" aria-selected="false"
+                        (click)="filterProd('Podcast')" (click)="pageChanged(1)">THE ARTIST'S JOURNEY</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="production-tab-content">
+        <!--
+        <div class="productions-print-left"></div>
+        <div class="productions-print-right"></div>
+        -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 row">
+
+                        <div class="text-center no-content">
+                            Sorry! No content to display at the moment.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--SHAKEXPERIENCE SECTION-->
+<div class="productions" id="shakexperience" *ngIf="prodName=='SHAKEXPERIENCE'">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="shakexperience-image  wow fade-in-left">
+
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6 py-3">
+            <div class="shakexperience-text p-2 p-md-3 p-lg-5">
+
+                <p class="gold-sub-heading py-3 wow fade-in-bottom">Welcome to ShakeXperience
+                </p>
+                <p class="px-3 wow fade-in-top">
+                    ShakeXperience, is an Applied Theatre company best known for award-winning educational programmes.
+                    The company has
+                    developed a teaching method known as ShakeXperience®, providing theatre productions and experiential
+                    learning for those
+                    in schools and corporate settings.
+                </p>
+
+                <p class="px-3 wow fade-in-top">
+                    ShakeXperience ® will design, implement, and oversee educational programmes to meet the client’s
+                    needs.
+                </p>
+
+                <p class="px-3 wow fade-in-top">
+                    ShakeXperience ® is also excited to take on facilitation activities and consulting for your
+                    organisation. Dr. Nobulali
+                    is the lead Facilitator, who has garnered invaluable experience along her path, including
+                    co-founding Nudgeathon™.
+                    Together with a team of experts, she designs, implements, and evaluates programmes and research for
+                    organisations.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6 py-3">
+            <div class="shakexperience-text p-2 p-md-3 p-lg-5">
+                <p class="gold-sub-heading py-3 wow fade-in-bottom">
+                    ShakeXperience has won several awards in the past, including:
+                </p>
+
+                <div class="ps-5 pe-2">
+                    <ul class="timeline ps-0 ps-md-2 ps-lg-5">
+                        <li class="timeline-item wow fade-in-top">
+                            <div class="timeline-info">
+                                <span>2011</span>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>SAB kickStart competition (National award).</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item wow fade-in-top">
+                            <div class="timeline-info">
+                                <span>2012</span>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>Media24 Giving You Space to Grow Initiative competition.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item wow fade-in-top">
+                            <div class="timeline-info">
+                                <span>2012/13</span>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>Shanduka Black Umbrellas Social media competition.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item wow fade-in-top">
+                            <div class="timeline-info">
+                                <span>2013</span>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>3rd position - Shanduka Black Umbrellas best performing
+                                        company.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-item wow fade-in-top">
+                            <div class="timeline-info">
+                                <span>2013</span>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <p>2nd position – Shanduka Black Umbrellas Ambassador.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-12 col-lg-6 py-3">
+            <div class="shakexperience-text p-2 p-md-3 p-lg-5">
+
+                <p class="gold-sub-heading py-3 wow fade-in-bottom">Countries that ShakeXperience has
+                    served:
+                </p>
+                <div>
+                    <div>
+                        <ul class="countries wow fade-in-top">
+                            <li>SOUTH AFRICA</li>
+                            <li>LESOTHO</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p class="gold-sub-heading py-3 wow fade-in-bottom">Countries that ShakeXperience
+                    collaborated with:
+                </p>
+
+                <div>
+                    <ul class="countries wow fade-in-top">
+                        <li>CHINA</li>
+                        <li> UNITED KINGDOM</li>
+                        <li>SOUTH AFRICA</li>
+                        <li>OMAN</li>
+                        <li>UNITED STATE OF AMERICA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

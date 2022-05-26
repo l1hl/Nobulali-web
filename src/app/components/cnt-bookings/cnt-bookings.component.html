@@ -1,0 +1,135 @@
+<div class="container-fluid cnt-bookings p-md-5 p-3">
+    <div class="container">
+        <div class="px-md-5">
+            <p class="main-header-white wow fade-in-bottom">
+                Bookings
+            </p>
+        </div>
+
+        <div class="content-holder p-md-5 pt-md-0">
+            <div class="row">
+                <div class="col-lg-6 p-md-5 pt-md-0 booking-text-holder">
+                    <p class="booking-secondary-text py-3 wow fade-in-top">
+                        Looking to collaborate on a project?
+                    </p>
+
+                    <p class="booking-text py-3 wow fade-in-top">
+                        <strong>Please Email</strong> - consulting@nobulali.co.za
+                    </p>
+
+                    <p class="booking-text py-3 wow fade-in-top">
+                        For leaders looking to be featured on Leading with Lali, please write to : <br>
+                        <strong>Email</strong> - leadwithlali@nobulali.co.za
+                    </p>
+
+                    <p class="py-3 wow fade-in-top">
+                        For press statements or interviews, my publicist can be reached at <br>
+                        <strong>Email</strong> - press@nobulali.co.za
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6 p-md-5 wow animate__fadeInRight" data-wow-duration="3s">
+                    <form [formGroup]="contactForm">
+                        <div class=" row">
+                            <div class="col-md-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Name</mat-label>
+                                    <input matInput placeholder="First Name" type="text" formControlName="firstName"
+                                        required>
+
+                                    <mat-error
+                                        *ngIf="!contactForm.get('firstName').valid && contactForm.get('firstName').touched">
+                                        Your first name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Surname</mat-label>
+                                    <input matInput placeholder="Last Name" type="text" formControlName="lastName"
+                                        required>
+
+                                    <mat-error
+                                        *ngIf="!contactForm.get('lastName').valid && contactForm.get('lastName').touched">
+                                        Your last name is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Phone</mat-label>
+                                    <input matInput placeholder="Phone Number" type="tel" formControlName="phone"
+                                        required>
+
+                                    <mat-error
+                                        *ngIf="!contactForm.get('phone').valid && contactForm.get('phone').touched">
+                                        Your contact number is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-6">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Email</mat-label>
+                                    <input matInput placeholder="Email" type="email" formControlName="email" required>
+
+                                    <mat-error
+                                        *ngIf="!contactForm.get('email').valid && contactForm.get('email').touched">
+                                        Your email address is <strong>required</strong>
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-12">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Message</mat-label>
+                                    <textarea rows="10" matInput placeholder="Message" type="text"
+                                        formControlName="message" required></textarea>
+
+                                    <mat-error
+                                        *ngIf="!contactForm.get('message').valid && contactForm.get('message').touched">
+                                        Don't you want to say something to us?
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div class="col-md-12 form-btn-holder">
+                                <button mat-raised-button class="btn btn-dark-blue" (click)="sendMessage()"
+                                    [disabled]="!contactForm.valid">Send</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+
+                    <!-- Modal -->
+                    <div class="modal fade {{showDialog ? 'show' : ''}}" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" attr.aria-hidden="{{showDialog ? 'false': 'true'}}"
+                        [ngStyle]="{'display': showDialog ? 'block' : ''}">
+                        <div class="modal-dialog modal-dialog-centered notice-dialog" role="document">
+                            <div class="modal-content notice-dialog">
+                                <div class="top-holder p-2">
+                                    <button mat-mini-fab data-bs-dismiss="modal" aria-label="Close" class="close-btn"
+                                        (click)="toggleDialog()">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+
+                                    <p class="gold-sub-heading pt-1 px-5"><span>{{messageHeader}}</span>
+                                    </p>
+                                </div>
+                                <div class="bottom-holder p-2">
+                                    <p class="text-center text-holder">
+                                        <b>{{userName}}</b>
+                                        <br>
+                                        {{messageLast}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
